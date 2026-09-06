@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <winsock2.h>
 
 #define PORT 8080
 
@@ -23,7 +22,6 @@ struct Doctor doctors[4] =
 
 int main()
 {
-    WSADATA wsa;
     SOCKET serverSocket;
     struct sockaddr_in server, client;
     int clientSize;
@@ -32,8 +30,6 @@ int main()
     char response[500];
 
     int i, id;
-
-    WSAStartup(MAKEWORD(2,2), &wsa);
 
     serverSocket = socket(AF_INET, SOCK_DGRAM, 0);
 

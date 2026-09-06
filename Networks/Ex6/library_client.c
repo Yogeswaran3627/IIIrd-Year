@@ -5,7 +5,6 @@
 
 int main()
 {
-    WSADATA wsa;
     SOCKET clientSocket;
     struct sockaddr_in server;
     int serverSize;

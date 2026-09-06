@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-#include <winsock2.h>
 
 #define PORT 8080
 
 int main()
 {
-    WSADATA wsa;
     SOCKET clientSocket;
     struct sockaddr_in server;
     int serverSize;
@@ -16,8 +14,6 @@ int main()
 
     int choice;
     int id;
-
-    WSAStartup(MAKEWORD(2,2), &wsa);
 
     clientSocket = socket(AF_INET, SOCK_DGRAM, 0);
 
